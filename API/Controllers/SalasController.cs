@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProyectoModels;
+using ProyectoModels.Models;
 
 namespace API.Controllers
 {
@@ -13,9 +13,9 @@ namespace API.Controllers
     [ApiController]
     public class SalasController : ControllerBase
     {
-        private readonly ProyectoPaWContext _context;
+        private readonly ProyectoPaW2Context _context;
 
-        public SalasController(ProyectoPaWContext context)
+        public SalasController(ProyectoPaW2Context context)
         {
             _context = context;
         }
@@ -54,7 +54,7 @@ namespace API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSala(int id, Sala sala)
         {
-            if (id != sala.Id)
+            if (id != sala.IdSala)
             {
                 return BadRequest();
             }
@@ -87,12 +87,12 @@ namespace API.Controllers
         {
           if (_context.Salas == null)
           {
-              return Problem("Entity set 'ProyectoPaWContext.Salas'  is null.");
+              return Problem("Entity set 'ProyectoPaW2Context.Salas'  is null.");
           }
             _context.Salas.Add(sala);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetSala", new { id = sala.Id }, sala);
+            return CreatedAtAction("GetSala", new { id = sala.IdSala }, sala);
         }
 
         // DELETE: api/Salas/5
@@ -112,12 +112,12 @@ namespace API.Controllers
             _context.Salas.Remove(sala);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(sala);
         }
 
         private bool SalaExists(int id)
         {
-            return (_context.Salas?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Salas?.Any(e => e.IdSala == id)).GetValueOrDefault();
         }
     }
 }

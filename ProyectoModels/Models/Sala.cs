@@ -1,20 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProyectoModels;
-
+namespace ProyectoModels.Models;
 
 public partial class Sala
 {
-    public int Id { get; set; }
-
-    public string NombreSala { get; set; } = null!;
+    public int IdSala { get; set; }
 
     public string Ubicacion { get; set; } = null!;
 
     public string Encargado { get; set; } = null!;
-
-    public int NoPersonal { get; set; }
 
     public string Departamento { get; set; } = null!;
 }

@@ -1,20 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using ProyectoModels;
+using ProyectoModels.Models;
+using System.Net.Http.Json;
+using Microsoft.AspNetCore.Http;
+using System.Resources;
+using System.Security.Policy;
+using System.Net.Http;
+using System.Web;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace ProyectoPaginasWeb.Controllers
 {
+    [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme)]
     public class SalasController : Controller
     {
-        private readonly ProyectoPaWContext _context;
+        private readonly ProyectoPaW2Context _context;
 
-        public SalasController(ProyectoPaWContext context)
+        public SalasController(ProyectoPaW2Context context)
         {
             _context = context;
         }
@@ -22,23 +31,21 @@ namespace ProyectoPaginasWeb.Controllers
         // GET: Salas
         public async Task<IActionResult> Index()
         {
-            
             HttpClient client = new HttpClient();
-            
-            var salas = await client.GetFromJsonAsync<IEnumerable<ProyectoModels.Sala>>(url + "/api/Salas");
+
+            var salas = await client.GetFromJsonAsync<IEnumerable<ProyectoModels.Models.Sala>>(url + "/api/Salas");
             if (salas != null)
-            { 
-                Console.WriteLine("todo bien conectando con API"+url);
+            {
+                Console.WriteLine("todo bien conectando con API" + url);
             }
             return View(salas);
-
         }
 
         // GET: Salas/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             HttpClient client = new HttpClient();
-            var salas = await client.GetFromJsonAsync<IEnumerable<ProyectoModels.Sala>>(url + "/api/Salas/");
+            var salas = await client.GetFromJsonAsync<IEnumerable<ProyectoModels.Models.Sala>>(url + "/api/Salas/");
 
             if (id == null || _context.Salas == null)
             {
@@ -46,7 +53,7 @@ namespace ProyectoPaginasWeb.Controllers
             }
 
             var sala = await _context.Salas
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.IdSala == id);
             if (sala == null)
             {
                 return NotFound();
@@ -56,7 +63,7 @@ namespace ProyectoPaginasWeb.Controllers
         }
 
         // GET: Salas/Create
-        public async Task <IActionResult> Create()
+        public IActionResult Create()
         {
             HttpClient client = new HttpClient();
             var res = client.GetAsync(url + "/api/Create");
@@ -72,22 +79,32 @@ namespace ProyectoPaginasWeb.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,NombreSala,Ubicacion,Encargado,NoPersonal,Departamento")] Sala sala)
+        public async Task<IActionResult> Create([Bind("IdSala,Ubicacion,Encargado,Departamento")] Sala sala)
         {
+            HttpClient client = new HttpClient();
+
             if (ModelState.IsValid)
             {
-                _context.Add(sala);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                var response = await client.PostAsJsonAsync<Sala>(url + "/api/Salas", sala);
+                Console.WriteLine("todo bien conectando con API" + url);
             }
-            return View(sala);
+            else
+            {
+                ViewData["IdSala"] = await client.GetFromJsonAsync<List<SelectListItem>>(url + "/api/Salas");
+                Console.WriteLine(" conectando con API" + url);
+                return View(sala);
+            }
+
+
+            return RedirectToAction(nameof(Index));
+
         }
 
         // GET: Salas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             HttpClient client = new HttpClient();
-            var salas = await client.GetFromJsonAsync<IEnumerable<ProyectoModels.Sala>>(url + "/api/Salas");
+            var salas = await client.GetFromJsonAsync<IEnumerable<ProyectoModels.Models.Sala>>(url + "/api/Salas");
             if (id == null || _context.Salas == null)
             {
                 return NotFound();
@@ -107,46 +124,34 @@ namespace ProyectoPaginasWeb.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,NombreSala,Ubicacion,Encargado,NoPersonal,Departamento")] Sala sala)
+        public async Task<IActionResult> Edit(int id, [Bind("IdSala,Ubicacion,Encargado,Departamento")] Sala sala)
         {
-            if (id != sala.Id)
+            HttpClient client = new HttpClient();
+            if (id != sala.IdSala)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(sala);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!SalaExists(sala.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+
+                var response = await client.PutAsJsonAsync(url + "/api/Salas/" + sala.IdSala.ToString(), sala);
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["IdSala"] = await client.GetFromJsonAsync<List<SelectListItem>>(url + "/api/Salas");
             return View(sala);
         }
 
         // GET: Salas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            HttpClient client = new HttpClient();
             if (id == null || _context.Salas == null)
             {
                 return NotFound();
             }
 
-            var sala = await _context.Salas
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var sala = await client.GetFromJsonAsync<Sala>(url + "/api/Salas/" + id.ToString());
             if (sala == null)
             {
                 return NotFound();
@@ -160,23 +165,22 @@ namespace ProyectoPaginasWeb.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            HttpClient client = new HttpClient();
             if (_context.Salas == null)
             {
-                return Problem("Entity set 'ProyectoPaWContext.Salas'  is null.");
+                return Problem("Entity set is null.");
             }
-            var sala = await _context.Salas.FindAsync(id);
-            if (sala != null)
-            {
-                _context.Salas.Remove(sala);
-            }
-            
-            await _context.SaveChangesAsync();
+            Console.WriteLine("hola");
+            var response = await client.DeleteFromJsonAsync<Sala>(url + "/api/Salas/" + id.ToString());
+
             return RedirectToAction(nameof(Index));
         }
 
+    
+
         private bool SalaExists(int id)
         {
-          return _context.Salas.Any(e => e.Id == id);
+          return (_context.Salas?.Any(e => e.IdSala == id)).GetValueOrDefault();
         }
     }
 }

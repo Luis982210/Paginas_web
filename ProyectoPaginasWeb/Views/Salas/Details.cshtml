@@ -1,4 +1,4 @@
-﻿@model ProyectoModels.Sala
+﻿@model ProyectoModels.Models.Sala
 
 @{
     ViewData["Title"] = "Details";
@@ -414,12 +414,6 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NombreSala)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NombreSala)
-        </dd>
-        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Ubicacion)
         </dt>
         <dd class = "col-sm-10">
@@ -432,12 +426,6 @@
             @Html.DisplayFor(model => model.Encargado)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NoPersonal)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NoPersonal)
-        </dd>
-        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Departamento)
         </dt>
         <dd class = "col-sm-10">
@@ -446,7 +434,7 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.IdSala">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
                         </div>
@@ -491,3 +479,5 @@
 </body>
 
 </html>
+
+

@@ -1,4 +1,4 @@
-﻿@model ProyectoModels.Usuario
+﻿@model ProyectoModels.Models.Usuario
 
 @{
     ViewData["Title"] = "Details";
@@ -392,12 +392,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../mobiliarios">
+                        <a class="nav-link" href="../../inmobiliarios">
                             <i class="mdi mdi-grid-large menu-icon"></i>
-                            <span class="menu-title">Inmobiliario</span>
+                            <span class="menu-title">mobiliario</span>
                         </a>
                     </li>
-      
+
                 </ul>
             </nav>
             <!-- partial -->
@@ -406,7 +406,12 @@
                     <div class="card">
                         <div class="card-body">
                             <h1 class="card-title">Detalles</h1>
-                            <h4>Usuario</h4>
+
+<h1>Details</h1>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
     <dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Email)
@@ -429,52 +434,50 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.IdUsuario">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
-
-</div>
+                        </div>
                     </div>
 
 
-<!-- content-wrapper ends -->
-<!-- partial:../../partials/_footer.html -->
-<footer class="footer">
-    <div class="d-sm-flex justify-content-center justify-content-sm-between">
-        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash.</span>
-        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
-    </div>
-</footer>
-<!-- partial -->
+                    <!-- content-wrapper ends -->
+                    <!-- partial:../../partials/_footer.html -->
+                    <footer class="footer">
+                        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash.</span>
+                            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
+                        </div>
+                    </footer>
+                    <!-- partial -->
                 </div>
-<!-- main-panel ends -->
+                <!-- main-panel ends -->
             </div>
-<!-- page-body-wrapper ends -->
+            <!-- page-body-wrapper ends -->
         </div>
-<!-- container-scroller -->
-<!-- plugins:js -->
-<script src="../../vendors/js/vendor.bundle.base.js"></script>
-<!-- endinject -->
-<!-- Plugin js for this page -->
-<script src="../../vendors/typeahead.js/typeahead.bundle.min.js"></script>
-<script src="../../vendors/select2/select2.min.js"></script>
-<script src="../../vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-<!-- End plugin js for this page -->
-<!-- inject:js -->
-<script src="../../js/off-canvas.js"></script>
-<script src="../../js/hoverable-collapse.js"></script>
-<script src="../../js/template.js"></script>
-<script src="../../js/settings.js"></script>
-<script src="../../js/todolist.js"></script>
-<!-- endinject -->
-<!-- Custom js for this page-->
-<script src="../../js/file-upload.js"></script>
-<script src="../../js/typeahead.js"></script>
-<script src="../../js/select2.js"></script>
-<!-- End custom js for this page-->
+        <!-- container-scroller -->
+        <!-- plugins:js -->
+        <script src="../../vendors/js/vendor.bundle.base.js"></script>
+        <!-- endinject -->
+        <!-- Plugin js for this page -->
+        <script src="../../vendors/typeahead.js/typeahead.bundle.min.js"></script>
+        <script src="../../vendors/select2/select2.min.js"></script>
+        <script src="../../vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+        <!-- End plugin js for this page -->
+        <!-- inject:js -->
+        <script src="../../js/off-canvas.js"></script>
+        <script src="../../js/hoverable-collapse.js"></script>
+        <script src="../../js/template.js"></script>
+        <script src="../../js/settings.js"></script>
+        <script src="../../js/todolist.js"></script>
+        <!-- endinject -->
+        <!-- Custom js for this page-->
+        <script src="../../js/file-upload.js"></script>
+        <script src="../../js/typeahead.js"></script>
+        <script src="../../js/select2.js"></script>
+        <!-- End custom js for this page-->
 </body>
 
 </html>
-
 
 

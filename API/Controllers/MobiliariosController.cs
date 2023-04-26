@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProyectoModels;
+using ProyectoModels.Models;
 
 namespace API.Controllers
 {
@@ -13,9 +13,9 @@ namespace API.Controllers
     [ApiController]
     public class MobiliariosController : ControllerBase
     {
-        private readonly ProyectoPaWContext _context;
+        private readonly ProyectoPaW2Context _context;
 
-        public MobiliariosController(ProyectoPaWContext context)
+        public MobiliariosController(ProyectoPaW2Context context)
         {
             _context = context;
         }
@@ -24,6 +24,7 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Mobiliario>>> GetMobiliarios()
         {
+            
           if (_context.Mobiliarios == null)
           {
               return NotFound();
@@ -54,7 +55,7 @@ namespace API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutMobiliario(int id, Mobiliario mobiliario)
         {
-            if (id != mobiliario.Id)
+            if (id != mobiliario.IdMobiliario)
             {
                 return BadRequest();
             }
@@ -87,12 +88,12 @@ namespace API.Controllers
         {
           if (_context.Mobiliarios == null)
           {
-              return Problem("Entity set 'ProyectoPaWContext.Mobiliarios'  is null.");
+              return Problem("Entity set 'ProyectoPaW2Context.Mobiliarios'  is null.");
           }
             _context.Mobiliarios.Add(mobiliario);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetMobiliario", new { id = mobiliario.Id }, mobiliario);
+            return CreatedAtAction("GetMobiliario", new { id = mobiliario.IdMobiliario }, mobiliario);
         }
 
         // DELETE: api/Mobiliarios/5
@@ -112,12 +113,12 @@ namespace API.Controllers
             _context.Mobiliarios.Remove(mobiliario);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(mobiliario);
         }
 
         private bool MobiliarioExists(int id)
         {
-            return (_context.Mobiliarios?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Mobiliarios?.Any(e => e.IdMobiliario == id)).GetValueOrDefault();
         }
     }
 }

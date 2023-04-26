@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luis1\\OneDrive\\Desktop\\ProyectoPaginas\\API\\API.csproj": {}
+    "C:\\Users\\luis1\\Downloads\\Paginas_web-main\\Paginas_web-main\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luis1\\OneDrive\\Desktop\\ProyectoPaginas\\API\\API.csproj": {
+    "C:\\Users\\luis1\\Downloads\\Paginas_web-main\\Paginas_web-main\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luis1\\OneDrive\\Desktop\\ProyectoPaginas\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\luis1\\Downloads\\Paginas_web-main\\Paginas_web-main\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\luis1\\OneDrive\\Desktop\\ProyectoPaginas\\API\\API.csproj",
+        "projectPath": "C:\\Users\\luis1\\Downloads\\Paginas_web-main\\Paginas_web-main\\API\\API.csproj",
         "packagesPath": "C:\\Users\\luis1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luis1\\OneDrive\\Desktop\\ProyectoPaginas\\API\\obj\\",
+        "outputPath": "C:\\Users\\luis1\\Downloads\\Paginas_web-main\\Paginas_web-main\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\luis1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\luis1\\OneDrive\\Desktop\\ProyectoPaginas\\ProyectoModels\\ProyectoModels.csproj": {
-                "projectPath": "C:\\Users\\luis1\\OneDrive\\Desktop\\ProyectoPaginas\\ProyectoModels\\ProyectoModels.csproj"
+              "C:\\Users\\luis1\\Downloads\\Paginas_web-main\\Paginas_web-main\\ProyectoModels\\ProyectoModels.csproj": {
+                "projectPath": "C:\\Users\\luis1\\Downloads\\Paginas_web-main\\Paginas_web-main\\ProyectoModels\\ProyectoModels.csproj"
               }
             }
           }
@@ -44,13 +44,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.Data.SqlClient": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[5.1.0, )"
+              "version": "[6.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -94,14 +94,14 @@
         }
       }
     },
-    "C:\\Users\\luis1\\OneDrive\\Desktop\\ProyectoPaginas\\ProyectoModels\\ProyectoModels.csproj": {
+    "C:\\Users\\luis1\\Downloads\\Paginas_web-main\\Paginas_web-main\\ProyectoModels\\ProyectoModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luis1\\OneDrive\\Desktop\\ProyectoPaginas\\ProyectoModels\\ProyectoModels.csproj",
+        "projectUniqueName": "C:\\Users\\luis1\\Downloads\\Paginas_web-main\\Paginas_web-main\\ProyectoModels\\ProyectoModels.csproj",
         "projectName": "ProyectoModels",
-        "projectPath": "C:\\Users\\luis1\\OneDrive\\Desktop\\ProyectoPaginas\\ProyectoModels\\ProyectoModels.csproj",
+        "projectPath": "C:\\Users\\luis1\\Downloads\\Paginas_web-main\\Paginas_web-main\\ProyectoModels\\ProyectoModels.csproj",
         "packagesPath": "C:\\Users\\luis1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luis1\\OneDrive\\Desktop\\ProyectoPaginas\\ProyectoModels\\obj\\",
+        "outputPath": "C:\\Users\\luis1\\Downloads\\Paginas_web-main\\Paginas_web-main\\ProyectoModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\luis1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -130,23 +130,19 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.Data.SqlClient": {
-              "target": "Package",
-              "version": "[5.1.0, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",

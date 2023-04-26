@@ -1,21 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProyectoModels;
+namespace ProyectoModels.Models;
 
 public partial class Mobiliario
 {
-    public int Id { get; set; }
+    public int IdMobiliario { get; set; }
 
     public int IdSala { get; set; }
 
-    public string Mobiliario1 { get; set; } = null!;
+    public string Nombre { get; set; } = null!;
 
-    public decimal Precio { get; set; }
-
-    public int Cantidad { get; set; }
+    public string Precio { get; set; } = null!;
 
     public string Descripcion { get; set; } = null!;
-
-    public int CodigoMobiliario { get; set; }
 }

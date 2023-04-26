@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProyectoModels;
+using ProyectoModels.Models;
 
 namespace API.Controllers
 {
@@ -13,9 +13,9 @@ namespace API.Controllers
     [ApiController]
     public class UsuariosController : ControllerBase
     {
-        private readonly ProyectoPaWContext _context;
+        private readonly ProyectoPaW2Context _context;
 
-        public UsuariosController(ProyectoPaWContext context)
+        public UsuariosController(ProyectoPaW2Context context)
         {
             _context = context;
         }
@@ -54,7 +54,7 @@ namespace API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUsuario(int id, Usuario usuario)
         {
-            if (id != usuario.Id)
+            if (id != usuario.IdUsuario)
             {
                 return BadRequest();
             }
@@ -87,12 +87,12 @@ namespace API.Controllers
         {
           if (_context.Usuarios == null)
           {
-              return Problem("Entity set 'ProyectoPaWContext.Usuarios'  is null.");
+              return Problem("Entity set 'ProyectoPaW2Context.Usuarios'  is null.");
           }
             _context.Usuarios.Add(usuario);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUsuario", new { id = usuario.Id }, usuario);
+            return CreatedAtAction("GetUsuario", new { id = usuario.IdUsuario }, usuario);
         }
 
         // DELETE: api/Usuarios/5
@@ -112,12 +112,12 @@ namespace API.Controllers
             _context.Usuarios.Remove(usuario);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(usuario);
         }
 
         private bool UsuarioExists(int id)
         {
-            return (_context.Usuarios?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Usuarios?.Any(e => e.IdUsuario == id)).GetValueOrDefault();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model ProyectoModels.Sala
+﻿@model ProyectoModels.Models.Sala
 
 @{
     ViewData["Title"] = "Create";
@@ -406,7 +406,6 @@
 
                     <div class="col-md-6 grid-margin stretch-card">
                         <div class="card">
-
 <h1>Create</h1>
 
 <h4>Sala</h4>
@@ -416,11 +415,6 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="NombreSala" class="control-label"></label>
-                <input asp-for="NombreSala" class="form-control" />
-                <span asp-validation-for="NombreSala" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="Ubicacion" class="control-label"></label>
                 <input asp-for="Ubicacion" class="form-control" />
                 <span asp-validation-for="Ubicacion" class="text-danger"></span>
@@ -429,11 +423,6 @@
                 <label asp-for="Encargado" class="control-label"></label>
                 <input asp-for="Encargado" class="form-control" />
                 <span asp-validation-for="Encargado" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NoPersonal" class="control-label"></label>
-                <input asp-for="NoPersonal" class="form-control" />
-                <span asp-validation-for="NoPersonal" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Departamento" class="control-label"></label>
@@ -498,4 +487,3 @@
 </body>
 
 </html>
-        
