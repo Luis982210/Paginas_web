@@ -1,0 +1,14 @@
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoModels\bin\Release\net6.0\ProyectoModels.deps.json
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoModels\bin\Release\net6.0\ProyectoModels.runtimeconfig.json
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoModels\bin\Release\net6.0\ProyectoModels.dll
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoModels\bin\Release\net6.0\ProyectoModels.pdb
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoModels\obj\Release\net6.0\ProyectoModels.csproj.AssemblyReference.cache
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoModels\obj\Release\net6.0\ProyectoModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoModels\obj\Release\net6.0\ProyectoModels.AssemblyInfoInputs.cache
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoModels\obj\Release\net6.0\ProyectoModels.AssemblyInfo.cs
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoModels\obj\Release\net6.0\ProyectoModels.csproj.CoreCompileInputs.cache
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoModels\obj\Release\net6.0\ProyectoModels.dll
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoModels\obj\Release\net6.0\refint\ProyectoModels.dll
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoModels\obj\Release\net6.0\ProyectoModels.pdb
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoModels\obj\Release\net6.0\ProyectoModels.genruntimeconfig.cache
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoModels\obj\Release\net6.0\ref\ProyectoModels.dll

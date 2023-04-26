@@ -57,7 +57,14 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 var connectionString = builder.Configuration.GetConnectionString("conexion");
 builder.Services.AddDbContext<ProyectoPaW2Context>(options => options.UseSqlServer(connectionString));
 builder.Services.Configure<ForwardedHeadersOptions>(option => option.ForwardedHeaders = Microsoft.AspNetCore.HttpOverrides.ForwardedHeaders.XForwardedFor | Microsoft.AspNetCore.HttpOverrides.ForwardedHeaders.XForwardedProto);
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllOrigins",
+        builder =>
+        {
+            builder.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod();
+        });
+});
 /*builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {
     options.RequireHttpsMetadata = false;

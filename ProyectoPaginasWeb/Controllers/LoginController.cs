@@ -34,7 +34,7 @@ namespace ProyectoPaginasWeb.Controllers
         [HttpPost]
         public async Task<IActionResult> IndexAsync(string email, string password)
         {
-            SqlConnection con = new SqlConnection("Server=LUIS\\MSSQLSERVER01; Database=ProyectoPaW2; Integrated Security=sspi;trusted_connection=true;TrustServerCertificate=True");
+            SqlConnection con = new SqlConnection("Server=192.168.56.1,1453; Database=ProyectoPaW2;User Id = sa; Password =1234 ; Integrated Security=false ");
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Usuarios WHERE email='" + email + "'AND contrasena = '" + password + "'AND permisos=1", con);
             DataTable dt = new DataTable("contador");
             Console.WriteLine(email);
@@ -52,7 +52,7 @@ namespace ProyectoPaginasWeb.Controllers
 
                 await HttpContext.SignInAsync(claimsPrincipal);
 
-                return RedirectToAction("Index", "Usuarios");
+                return RedirectToAction("Index","Mobiliarios");
             }
             else
             {
@@ -61,6 +61,16 @@ namespace ProyectoPaginasWeb.Controllers
                 da2.Fill(dt2);
                 if (dt2.Rows.Count > 0)
                 {
+                    Console.WriteLine("ENCONTRADO");
+                    var claims = new List<Claim>();
+                    claims.Add(new Claim("password", password));
+                    claims.Add(new Claim(ClaimTypes.NameIdentifier, "1234"));
+                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+
+                    await HttpContext.SignInAsync(claimsPrincipal);
+
+                    return RedirectToAction("Index", "Mobiliarios");
                     Console.WriteLine("ENCONTRADO");
                     return Redirect("/Salas");
                 }

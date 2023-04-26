@@ -16,7 +16,7 @@ namespace ProyectoPaginasWeb.Controllers
     public class UsuariosController : Controller
     {
         private readonly ProyectoPaW2Context _context;
-        static string url = "https://localhost:7135";
+        static string url = "https://localhost:8082";
         public UsuariosController(ProyectoPaW2Context context)
         {
             _context = context;

@@ -395,7 +395,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../../mobiliarios">
                             <i class="mdi mdi-grid-large menu-icon"></i>
-                            <span class="menu-title">Inmobiliario</span>
+                            <span class="menu-title">Mobiliario</span>
                         </a>
                     </li>
 
@@ -408,6 +408,11 @@
                     <div class="col-md-14 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
+                                <h1>Index</h1>
+
+                                <p>
+                                    <a asp-action="Create">Create New</a>
+                                </p>
 <table class="table">
     <thead>
         <tr>
@@ -442,7 +447,7 @@
                 @Html.DisplayFor(modelItem => item.Descripcion)
             </td>
                                                 <td>
-                                                    <a asp-action="Create">Crear Nuevo mobiliario</a> |
+                                                   
                                                     <a asp-action="Edit" asp-route-id="@item.IdMobiliario">Editar mobiliario</a> |
                                                     <br></br>
                                                     <a asp-action="Details" asp-route-id="@item.IdMobiliario">Detalles de mobiliario</a> |

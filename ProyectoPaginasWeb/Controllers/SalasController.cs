@@ -27,7 +27,7 @@ namespace ProyectoPaginasWeb.Controllers
         {
             _context = context;
         }
-        static string url = "https://localhost:7135";
+        static string url = "https://localhost:8082";
         // GET: Salas
         public async Task<IActionResult> Index()
         {

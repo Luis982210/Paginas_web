@@ -22,7 +22,7 @@ namespace ProyectoPaginasWeb.Controllers
         {
             _context = context;
         }
-        static string url = "https://localhost:7135";
+        static string url = "https://localhost:8082";
         // GET: Mobiliarios
         public async Task<IActionResult> Index()
         {
@@ -44,10 +44,11 @@ namespace ProyectoPaginasWeb.Controllers
         }
 
         // GET: Mobiliarios/Details/5
+        
         public async Task<IActionResult> Details(int? id)
         {
             HttpClient client = new HttpClient();
-            var salas = await client.GetFromJsonAsync<IEnumerable<ProyectoModels.Models.Sala>>(url + "/api/Mobiliarios/");
+            var salas = await client.GetFromJsonAsync<IEnumerable<ProyectoModels.Models.Sala>>(url + "/api/Mobiliarios");
             if (id == null || _context.Mobiliarios == null)
             {
                 return NotFound();
@@ -64,6 +65,7 @@ namespace ProyectoPaginasWeb.Controllers
         }
 
         // GET: Mobiliarios/Create
+
         public IActionResult Create()
         {
             HttpClient client = new HttpClient();
@@ -80,17 +82,17 @@ namespace ProyectoPaginasWeb.Controllers
         {
             HttpClient client = new HttpClient();
 
-            if (ModelState.IsValid)
-            {
+           // if (ModelState.IsValid)
+           // {
                 var response = await client.PostAsJsonAsync<Mobiliario>(url + "/api/Mobiliarios", mobiliario);
                 Console.WriteLine("todo bien conectando con API" + url);
-            }
-            else
+           // }
+            /*else
             {
                 ViewData["IdMobiliario"] = await client.GetFromJsonAsync<List<SelectListItem>>(url + "/api/Mobiliarios");
                 Console.WriteLine(" conectando con API" + url);
                 return View(mobiliario);
-            }
+            }*/
 
 
             return RedirectToAction(nameof(Index));

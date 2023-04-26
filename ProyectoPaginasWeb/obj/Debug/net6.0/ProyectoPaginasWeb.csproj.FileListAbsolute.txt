@@ -318,6 +318,8 @@ C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bi
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\Humanizer.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\MessagePack.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\MessagePack.Annotations.dll
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\Microsoft.Build.dll
@@ -381,6 +383,7 @@ C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bi
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\Mono.TextTemplating.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\NuGet.Common.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\NuGet.Configuration.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\NuGet.DependencyResolver.Core.dll
@@ -401,6 +404,7 @@ C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bi
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\System.Drawing.Common.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\System.Memory.Data.dll
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\System.Net.Http.Json.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\System.Reflection.MetadataLoadContext.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\System.Runtime.Caching.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
@@ -564,6 +568,8 @@ C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bi
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
@@ -576,6 +582,7 @@ C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bi
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
@@ -587,6 +594,8 @@ C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\ob
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\obj\Debug\net6.0\ProyectoPaginasWeb.AssemblyInfo.cs
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\obj\Debug\net6.0\ProyectoPaginasWeb.csproj.CoreCompileInputs.cache
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\obj\Debug\net6.0\ProyectoPaginasWeb.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\obj\Debug\net6.0\ProyectoPaginasWeb.RazorAssemblyInfo.cache
+C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\obj\Debug\net6.0\ProyectoPaginasWeb.RazorAssemblyInfo.cs
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\obj\Debug\net6.0\staticwebassets\msbuild.ProyectoPaginasWeb.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\obj\Debug\net6.0\staticwebassets\msbuild.build.ProyectoPaginasWeb.props
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ProyectoPaginasWeb.props
@@ -601,12 +610,3 @@ C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\ob
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\obj\Debug\net6.0\ProyectoPaginasWeb.pdb
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\obj\Debug\net6.0\ProyectoPaginasWeb.genruntimeconfig.cache
 C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\obj\Debug\net6.0\ref\ProyectoPaginasWeb.dll
-C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\obj\Debug\net6.0\ProyectoPaginasWeb.RazorAssemblyInfo.cache
-C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\obj\Debug\net6.0\ProyectoPaginasWeb.RazorAssemblyInfo.cs
-C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\System.Net.Http.Formatting.dll
-C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
-C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\System.Net.Http.Json.dll
-C:\Users\luis1\Downloads\Paginas_web-main\Paginas_web-main\ProyectoPaginasWeb\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
